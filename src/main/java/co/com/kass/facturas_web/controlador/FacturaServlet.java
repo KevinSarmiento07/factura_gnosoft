@@ -62,22 +62,11 @@ public class FacturaServlet extends HttpServlet {
         double subtotal = Double.parseDouble(req.getParameter("subtotal"));
         double total = Double.parseDouble(req.getParameter("total"));
         double iva = Double.parseDouble(req.getParameter("iva"));
-        
-        List<ItemFactura> items = new ArrayList<>();
-        ItemFactura item = null;
-        
         String productosId[] = req.getParameter("productosId").split(",");
         String productosCantidad[] = req.getParameter("productosCantidad").split(",");
-        for(int i = 0; i < productosId.length; i++){
-            Producto producto = productoService.buscarPorId(Integer.parseInt(productosId[i]));
-            item = new ItemFactura(0, producto, Integer.parseInt(productosCantidad[i]));
-            items.add(item);
-        }
-        
-        Factura factura = new Factura(0, nombreCliente, date,subtotal,total,iva, items);
         
         try {
-            facturaService.saveFactura(factura);
+            facturaService.saveFactura(nombreCliente,date,subtotal,total,iva,productosId,productosCantidad);
         } catch(SQLException e) {
             throw new RuntimeException(e);
         }
@@ -100,45 +89,16 @@ public class FacturaServlet extends HttpServlet {
         double subtotal = Double.parseDouble(req.getParameter("subtotal"));
         double total = Double.parseDouble(req.getParameter("total"));
         double iva = Double.parseDouble(req.getParameter("iva"));
-        
-        List<ItemFactura> items = new ArrayList<>();
-        List<ItemFactura> itemsEliminar = facturaService.listarItemFacturasByIdFactura(id);
-        
-        Set<Integer> productosIdSet = new HashSet<>();
-        
-        ItemFactura item = null;
-        
         String productosId[] = req.getParameter("productosId").split(",");
         String productosCantidad[] = req.getParameter("productosCantidad").split(",");
         
-        for (String idProd : productosId) {
-            productosIdSet.add(Integer.valueOf(idProd));
-        }
-        for (ItemFactura itemEl : itemsEliminar) {
-            if (!productosIdSet.contains(itemEl.getProducto().getId())) {
-                facturaService.eliminarItemFacturaPorId(itemEl.getId());
-            }
-        }
-        for(int i = 0; i < productosId.length; i++){
-            item = facturaService.obtenerItemFacturaPorProductoIdYFacturaId(Integer.parseInt(productosId[i]),id);
-            if(item == null){
-                Producto producto = productoService.buscarPorId(Integer.parseInt(productosId[i]));
-                item = new ItemFactura(0, producto, Integer.parseInt(productosCantidad[i]));
-                facturaService.guardarItemFacturaPorIdFactura(id, item);
-            }else{
-                item.setCantidad(Integer.valueOf(productosCantidad[i]));
-                facturaService.actualizarItemFactura(item, id);
-            }
-            item = null;
+        
+        try {
+            facturaService.actualizarFactura(id,date,subtotal,total,iva,productosId,productosCantidad);
+        }catch(Exception e){
+            e.printStackTrace();
         }
         
-        Factura factura = facturaService.obtenerFacturaPorId(id);
-        factura.setFecha(date);
-        factura.setIva(iva);
-        factura.setSubtotal(subtotal);
-        factura.setTotal(total);
-        
-        facturaService.actualizarFactura(factura);
         resp.setStatus(200);
     }
     

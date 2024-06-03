@@ -1,6 +1,4 @@
 function eliminarFactura(id){
-    console.log(id);
-    console.log("Eliminar Factura");
     fetch('/facturas?id=' + id, {
         method: 'DELETE',
     }).then((res) =>{
@@ -27,8 +25,6 @@ function eliminarFactura(id){
 
 function handlerUpdate(e, id){
     e.preventDefault();
-    console.log(e);
-    console.log(id);
     document.getElementById('productosId').value = productosId;
     document.getElementById('productosCantidad').value = productosCantidad;
     let formData = new FormData();
@@ -45,7 +41,6 @@ function handlerUpdate(e, id){
         body: formData,
 
     }).then((res) =>{
-        console.log("todo salio bien");
         if(res.status === 200){
 
             Swal.fire({
@@ -65,7 +60,6 @@ let productosNombre = [];
 let productosValor = [];
 let productosCantidad = [];
 function addProducto(){
-    console.log("Add Producto");
 
     let select = document.getElementById("select-producto");
     let selectOption = select.options[select.selectedIndex];
@@ -75,16 +69,12 @@ function addProducto(){
     let productoId = select.value;
 
     if(document.getElementById("factura-row-" +productoId) === null){
-        console.log("entro en if")
         productosId.push(Number(productoId));
         productosNombre.push(productoNombre);
         productosValor.push(Number(productoValor));
         productosCantidad.push(1);
         addRow();
     }else{
-        console.log("entro en false");
-        console.log(productosId);
-        console.log(productoId)
         let position = productosId.indexOf(Number(productoId));
         productosCantidad[position]++;
         addRow();
@@ -222,21 +212,17 @@ function addInformationTable(tableBody,subtotal,ivaInput,total){
 }
 
 function handlerIva(){
-    console.log('hola');
     addRow();
 }
 
 function eliminarFila(id){
-    console.log('Eliminar fila');
     let position = productosId.indexOf(id);
-    console.log(position);
     productosId.splice(position, 1);
     productosValor.splice(position,1);
     productosCantidad.splice(position,1);
     productosNombre.splice(position,1);
 
     addRow();
-    console.log(id);
 }
 
 function handlerSubmit() {

@@ -4,15 +4,16 @@ import co.com.kass.facturas_web.modelo.Factura;
 import co.com.kass.facturas_web.modelo.ItemFactura;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 public interface IFacturaService {
     
     public List<Factura> listarFacturas();
-    public int saveFactura(Factura factura) throws SQLException;
+    public int saveFactura(String nombreCliente, Date fecha,Double subtotal, Double total, Double iva,String productosId[],String productosCantidad[]) throws SQLException;
     public int deleteFactura(int idFactura);
     public Factura obtenerFacturaPorId(int id);
-    public int actualizarFactura(Factura factura);
+    public int actualizarFactura(int idFactura,Date fecha,Double subtotal, Double total, Double iva,String productosId[],String productosCantidad[]);
     
     
     public List<ItemFactura> listarItemFacturasByIdFactura(int idFactura);

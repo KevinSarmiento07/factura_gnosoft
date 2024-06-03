@@ -1,6 +1,4 @@
 function eliminarProducto(id){
-    console.log(id);
-    console.log("Eliminar Producto");
     fetch('/productos?id=' + id, {
         method: 'DELETE',
     }).then((res) =>{

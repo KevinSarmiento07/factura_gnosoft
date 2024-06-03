@@ -83,10 +83,8 @@
         productosNombre.push("${item.producto.nombre}");
         productosCantidad.push(Number(${item.cantidad}));
         productosValor.push(Number(${item.producto.valor}));
-        console.log(${item.id});
         </c:forEach>
         addRow();
     }
-    console.log(productosId)
 </script>
 </html>
