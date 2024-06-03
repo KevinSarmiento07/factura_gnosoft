@@ -1,0 +1,69 @@
+
+g	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£âı1
+g	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£âı1
+g	java:S112b"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£âı1
+C	java:S131#""Add a default case to this switch.(’ÂŸ©úÿÿÿÿ8®£âı1
+ƒ
+java:S1989%"fHandle the following exceptions that could be thrown by "listFacturas": ServletException, IOException.(à—¨É8®£âı1
+„
+java:S1989)"gHandle the following exceptions that could be thrown by "formCrearFact": ServletException, IOException.(æŞ¤8®£âı1
+ˆ
+java:S1989-"fHandle the following exceptions that could be thrown by "formEditFact": ServletException, IOException.(¥ã–£şÿÿÿÿ8®£âı1
+c
+java:S1989<"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ8²£âı1
+y
+java:S1989>"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(¾íäİ8³£âı1
+~
+java:S1989?"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(ÂîÀ›úÿÿÿÿ8´£âı1
+~
+java:S1989@"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(³èÖ‘ûÿÿÿÿ8´£âı1
+G
+java:S1197E"*Move the array designators [] to the type.(Ìà¨ã8¶£âı1
+L
+java:S1197F"*Move the array designators [] to the type.(îÓÙÅùÿÿÿÿ8·£âı1
+{
+java:S1989H"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(äØşãşÿÿÿÿ8¸£âı1
+v
+java:S1989I"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(Âäßú8¸£âı1
+c
+java:S1989R"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ8¹£âı1
+p
+java:S1989T"SHandle the following exception that could be thrown by "sendRedirect": IOException.(¥¸¯¸8¹£âı1
+[
+java:S1854h"9Remove this useless assignment to local variable "items".(ú­œõûÿÿÿÿ8º£âı1
+[
+java:S1854„"8Remove this useless assignment to local variable "item".(¾—ßüÿÿÿÿ8º£âı1
+‰
+java:S1989Y"lHandle the following exception that could be thrown by "setCharacterEncoding": UnsupportedEncodingException.(±Œ©À8»£âı1
+v
+java:S1989["YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(™Œóœ8»£âı1
+c
+java:S1989b"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ8¼£âı1
+y
+java:S1989d"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(¾íäİ8¼£âı1
+~
+java:S1989e"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(ÂîÀ›úÿÿÿÿ8¼£âı1
+~
+java:S1989f"\Handle the following exception that could be thrown by "parseDouble": NumberFormatException.(³èÖ‘ûÿÿÿÿ8¼£âı1
+L
+java:S1481h"*Remove this unused "items" local variable.(ú­œõûÿÿÿÿ8½£âı1
+G
+java:S1197o"*Move the array designators [] to the type.(Ìà¨ã8½£âı1
+L
+java:S1197p"*Move the array designators [] to the type.(îÓÙÅùÿÿÿÿ8¾£âı1
+z
+java:S1989s"XHandle the following exception that could be thrown by "valueOf": NumberFormatException.(¤¹‚©ıÿÿÿÿ8¾£âı1
+v
+java:S1989{"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(ÕŸÎé8À£âı1
+{
+java:S1989}"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(äØşãşÿÿÿÿ8À£âı1
+v
+java:S1989~"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(Âäßú8À£âı1
+u
+java:S1989"XHandle the following exception that could be thrown by "valueOf": NumberFormatException.(Ôƒçe8Á£âı1
+w
+java:S1989”"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(™Œóœ8Ã£âı1
+u
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¸¶Àæ8Ç£âı1
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(çÏ´úıÿÿÿÿ8Ç£âı1

@@ -1,0 +1,20 @@
+
+h	java:S112™"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ôÏğâı1
+j
+java:S1192/"HDefine a constant instead of duplicating this literal "fact_id" 3 times.(ßÕÄáşÿÿÿÿ8‹¹ãâı1
+a
+java:S2259g"DA "NullPointerException" could be thrown; "psItem" is nullable here.(´âÛ€8Ø¹ãâı1
+r
+java:S2095û"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(°î¯™úÿÿÿÿ8Ø¹ãâı1
+r
+java:S2095ì"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ŒÙ‡®şÿÿÿÿ8Ø¹ãâı1
+O
+java:S1481"1Remove this unused "itemFacturas" local variable.(³ŒÖ¡8ÿĞğâı1
+M
+java:S1481Õ"/Remove this unused "itemFactId" local variable.(¹¬Ó¨8í¹ãâı1
+Y
+java:S1854ì"6Remove this useless assignment to local variable "ps".(ŒÙ‡®şÿÿÿÿ8÷¹ãâı1
+E
+java:S1481è"'Remove this unused "ps" local variable.(¿›ªé8÷¹ãâı1
+J
+java:S1481é"'Remove this unused "rs" local variable.(ÀÇÄûÿÿÿÿ8©ãáı1
